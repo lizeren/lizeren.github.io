@@ -5,13 +5,13 @@ main:
 
   # - title: "Talks"
   #   url: /talks/  
-  
-   
-  - class: "Course"
+
+
+  - title: "Course"
     url: /course/ 
 
-  # - title: "Teaching"
-  #   url: /teaching/    
+  - title: "Teaching"
+    url: /teaching/    
     
   - title: "Project"
     url: /project/
