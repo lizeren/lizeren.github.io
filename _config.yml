@@ -200,12 +200,6 @@ kramdown:
 
 # Collections
 collections:
-class:
-    output: true
-    permalink: /:collection/:path/
-project:
-    output: true
-    permalink: /:collection/:path/
   teaching:
     output: true
     permalink: /:collection/:path/
