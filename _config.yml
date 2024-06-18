@@ -267,6 +267,24 @@ defaults:
       author_profile: true
       share: true
       comment: true
+  # project
+  - scope:
+      path: ""
+      type: project
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # cv
+  - scope:
+      path: ""
+      type: cv
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
   # _talks
   - scope:
       path: ""
