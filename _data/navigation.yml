@@ -10,8 +10,8 @@ main:
   - title: "Course"
     url: /course/ 
 
-  - title: "Teaching"
-    url: /teaching/    
+  # - title: "Teaching"
+  #   url: /teaching/    
     
   - title: "Project"
     url: /project/
@@ -19,7 +19,7 @@ main:
   - title: "Blog Posts"
     url: /year-archive/
     
-  - title: "CV"
+  - title: "Resume"
     url: /cv/
     
   # - title: "Guide"
