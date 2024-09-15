@@ -62,3 +62,10 @@ Teaching
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
+
+<iframe src="{{ base_path }}/files/zeren_li_resume_3.pdf" width="100%" height="500px">
+    This browser does not support PDFs. Please download the PDF to view it: 
+    <a href="{{ base_path }}/files/zeren_li_resume_3.pdf">Download PDF</a>
+</iframe>
+
+<p><a href="{{ base_path }}/files/your_cv.pdf" target="_blank">Download CV</a></p>
