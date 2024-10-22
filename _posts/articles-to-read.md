@@ -1,6 +1,6 @@
 ---
 title: 'Articles to Read'
-date: 2024-10-22
+date: 2024-10-21
 permalink: /posts/2024/10/articles-to-read/
 tags:
   - Articles
