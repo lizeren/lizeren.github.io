@@ -12,3 +12,5 @@ Articles I read and will read in the future.
 
 [Modalias](https://wiki.archlinux.org/title/Modalias)
 [module_device_table macro](https://www.emblogic.com/blog/08/module_device_table-macro/#:~:text=This%20Macro%20is%20used%20by,driver%20and%20builds%20a%20table.)
+[How to Use Performance Monitor Unit (PMU) of 64-bit ARMv8 A in Linux](https://zhiyisun.github.io/2016/03/02/How-to-Use-Performance-Monitor-Unit-(PMU)-of-64-bit-ARMv8-A-in-Linux.html)
+[USB On-The-Go (OTG)](https://trac.gateworks.com/wiki/linux/OTG)
