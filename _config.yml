@@ -21,7 +21,7 @@ repository               : "lizeren/lizeren.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/shiba_inu.jpg"
+  avatar           : "/images/shiba_inu.jpg"
   name             : "Zeren Li "
   pronouns         : "George"  
   bio              : "Computer Engineering Student"
