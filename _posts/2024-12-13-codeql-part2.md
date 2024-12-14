@@ -62,8 +62,8 @@ This YAML file, `security-and-quality-selectors.yml`, defines selectors for filt
 
 #### **1. Description**
 `description: Selectors for selecting the security-and-quality queries for a language` 
- Provides a description for the selector file, indicating that it is meant to filter and select security-and-quality queries for a specific language.
- #### **2. Query Inclusions**
+Provides a description for the selector file, indicating that it is meant to filter and select security-and-quality queries for a specific language.
+#### **2. Query Inclusions**
 These sections specify which queries should be included in the analysis based on their attributes.
 ### **Include Queries Based on `kind` and `precision`**
 ```yml
@@ -110,3 +110,5 @@ Excludes queries in the `experimental` directory, specific metrics like `Framewo
       - modelgenerator` 
 ```
 Excludes queries tagged with `modeleditor` or `modelgenerator`, which are typically used for internal tooling or query generation.
+
+Note: You can use the codeql resolve queries /path/to/suite.qls command to see which queries are selected by a query suite definition.
