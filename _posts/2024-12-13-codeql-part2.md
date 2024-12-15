@@ -30,9 +30,7 @@ Navigate to the appropriate directory for your language (in our case, C++):
     `cd /home/lizeren/Desktop/vscode-codeql-starter/ql/cpp/ql/src/codeql-suites/`
 **2. Run the `.qls` File**
 ```bash
-codeql database analyze 
-  /home/lizeren/Desktop/codebase_codeql/libz-codeql-db /home/lizeren/Desktop/vscode-codeql-starter/ql/cpp/ql/src/codeql-suites/cpp-code-scanning.qls 
-  --format=csv --output=results.csv
+codeql database analyze /home/lizeren/Desktop/codebase_codeql/libz-codeql-db /home/lizeren/Desktop/vscode-codeql-starter/ql/cpp/ql/src/codeql-suites/cpp-code-scanning.qls --format=csv --output=results.csv
 ```
 **3. View the result**
 You can refer back to the [official documentation](https://docs.github.com/en/code-security/codeql-cli/using-the-advanced-functionality-of-the-codeql-cli/csv-output) to interpretate the result.
