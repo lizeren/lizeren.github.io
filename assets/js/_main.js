@@ -97,21 +97,3 @@ $(document).ready(function(){
   });
 
 });
-document.addEventListener('DOMContentLoaded', function() {
-  Prism.plugins.toolbar.registerButton('copy-to-clipboard', function(env) {
-    let button = document.createElement('button');
-    button.textContent = 'Copy';
-    
-    button.addEventListener('click', function() {
-      let code = env.element.textContent;
-      navigator.clipboard.writeText(code).then(function() {
-        button.textContent = 'Copied!';
-        setTimeout(function() {
-          button.textContent = 'Copy';
-        }, 2000);
-      });
-    });
-    
-    return button;
-  });
-});
