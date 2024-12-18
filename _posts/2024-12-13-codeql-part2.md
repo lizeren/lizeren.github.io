@@ -1,5 +1,11 @@
+---
+title: 'How to Use CodeQL (part 2)'
+date: 2024-12-13
+permalink: /posts/2024/12/How-to-Use-CodeQL-Part2/
+tags:
+  - Articles
+---
 
-  
 
 # How to Use CodeQL (part 2)
 
