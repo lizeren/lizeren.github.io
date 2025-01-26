@@ -8,6 +8,11 @@ tags:
 
 Useful Linux commands and tricks to solve common problems
 
+## Table of Contents
+- [Only one monitor is working](#only-one-monitor-is-working)
+- [Create shortcut for AppImage](#create-shortcut-for-appimage)
+
+
 # Only one monitor is working
 When you update your kernel or install a new Linux distribution, it's possible that the NVIDIA driver you were using needs to be reinstalled or updated.
 
