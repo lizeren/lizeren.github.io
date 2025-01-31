@@ -76,4 +76,35 @@ Finally, update the desktop database so that the system recognizes the new deskt
 ```bash
 update-desktop-database ~/.local/share/applications/
 ```
+What if after an update, the name of the application is changed?
+### Step 1: Create a Symlink to the Latest AppImage
+Run the following command:
+
+Step 2: Update Your .desktop File```bash
+#use Cursor IDE as an example
+```bash
+ln -sf ~/Downloads/cursor-*.AppImage ~/Downloads/Cursor.AppImage
+```
+This will create (or update) a symlink named Cursor.AppImage that always points to the most recent version.
+### Step 2: Update Your .desktop File
+Modify your cursor.desktop file (located at ~/.local/share/applications/cursor.desktop) so that it points to the symlink instead of the actual AppImage:
+
+```bash
+[Desktop Entry]
+Type=Application
+Name=Cursor
+Exec=/home/lizeren/Downloads/Cursor.AppImage
+Icon=/home/lizeren/Downloads/cursor.png
+```
+refresh the desktop database:
+```bash
+update-desktop-database ~/.local/share/applications/
+```
+### Step 3: Run This Command After Updating the AppImage
+Each time you download a new version of Cursor.AppImage into ~/Downloads, just run:
+
+```bash
+ln -sf ~/Downloads/cursor-*.AppImage ~/Downloads/Cursor.AppImage
+```
+This will update the symlink so that the shortcut keeps working without needing to edit the .desktop file.
 source: [How to Create a Shortcut for an AppImage on Ubuntu](https://www.linuxadictos.com/2022/01/24/how-to-create-a-shortcut-for-an-appimage-on-ubuntu/)
