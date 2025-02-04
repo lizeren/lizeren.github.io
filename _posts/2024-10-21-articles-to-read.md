@@ -7,6 +7,7 @@ tags:
 ---
 
 Articles I read and will read in the future.
+*Most recent update: 2025-02-04*
 
 ## Linux Kernel Modules
 
@@ -20,3 +21,7 @@ Articles I read and will read in the future.
 [Differentiate an ELF executable from a shared library](https://serializethoughts.com/2019/06/29/elf-pic-pie#:~:text=Shared%20libraries%20are%20always%20compiled,any%20address%20in%20the%20memory)
 
 [https://lief.re/doc/latest/tutorials/08_elf_bin2lib.html](https://lief.re/doc/latest/tutorials/08_elf_bin2lib.html)
+
+## Fun stuff
+
+[Fun with Webcams](https://askubuntu.com/questions/348838/how-to-check-available-webcams-from-the-command-line)
