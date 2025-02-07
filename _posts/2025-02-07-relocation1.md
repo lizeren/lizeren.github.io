@@ -1,6 +1,6 @@
 ---
 title: 'Relocation Tutorial 1'
-date: 2025-02-02
+date: 2025-02-07
 permalink: /posts/2025/02/relocation1/
 tags:
   - Articles
