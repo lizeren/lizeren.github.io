@@ -58,3 +58,45 @@ gcc -m32 -fno-pie -g -c driver.c -o driver.o
 gcc -m32 -fno-pie -g -o driver driver.o -L. -lmlreloc
 ```
 
+## Extra credit #2 explanation:
+#### 1. Why Sym.Value Equals Offset in R_386_COPY Relocations?
+
+The Sym.Value column represents the symbol's value, which is typically its resolved address.
+The Sym.Value field in readelf -r represents the address where the symbol is expected to be found at runtime.
+It corresponds to the st_value field in the ELF symbol table (.symtab).
+For functions, Sym.Value is the address where the function starts in memory.
+For global variables, Sym.Value is the address where the variable is stored in memory.
+Example (for a function)
+If ml_util_func is defined in a shared library:
+```bash
+000004b4  00000502 R_386_PC32        0000049c   ml_util_func
+```
+Sym.Value (0000049c) is the resolved address of ml_util_func.
+The relocation at offset 000004b4 updates a PC-relative reference to this address. Which in other words, 4b4 is the instruction address where the function ml_util_func is called in the program.
+
+####2. Special Case: R_386_COPY Relocation
+When a global variable (like myglob) is defined in a shared library but referenced in an executable, an R_386_COPY relocation occurs. This changes the usual meaning of Sym.Value.
+
+Example (readelf -r driver output)
+```bash
+0804a018  00000605 R_386_COPY        0804a018   myglob
+```
+For myglob, we see that:
+
+Offset = 0x804a018 → The location in the executable where the copied data will reside.
+Sym.Value = 0x804a018 → The value of myglob, but why is it the same?
+Normally, Sym.Value points to the original definition of the symbol (inside libmlreloc.so).
+However, for R_386_COPY, the dynamic linker overrides this:
+It creates a new copy of myglob inside the executable.
+The linker replaces Sym.Value with the new address in the executable.
+This ensures that all references to myglob now use the program’s copy, not the shared library’s.
+Thus, for R_386_COPY, Sym.Value reflects the newly allocated address inside the program rather than the original address in the shared library.
+
+#### 3. What Happens at Runtime?
+The dynamic loader (ld.so) processes relocation entries.
+It sees an R_386_COPY relocation for myglob.
+It copies the value of myglob from libmlreloc.so to the new location (0x804a018) in driver.
+From this point onward, all references to myglob use the copy in driver.
+
+
+If the website of the original article is down in the future, you can refer to the [PDF document](../_archive-copy/your-document.pdf).
