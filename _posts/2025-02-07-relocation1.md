@@ -29,7 +29,10 @@ usr/bin/ld: ml_mainreloc.o: warning: relocation against myglob' in read-only sec
 /usr/bin/ld: warning: creating DT_TEXTREL in a shared object
 ```
 The warnings indicate that load-time relocation is happening, and the shared library contains text relocations (DT_TEXTREL), which are undesirable in modern systems.
-
+In the end, add this shared library to the PATH
+```bash
+export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+```
 
 ## Issue 2: Load-time relocation in action
 
@@ -51,7 +54,7 @@ This error occurs because:
 
 what we should do instead is:
 ```bash
-gcc -m32 -fno-pie -c driver.c -o driver.o
-gcc -m32 -fno-pie -o driver driver.o -L. -lmlreloc
+gcc -m32 -fno-pie -g -c driver.c -o driver.o
+gcc -m32 -fno-pie -g -o driver driver.o -L. -lmlreloc
 ```
 
