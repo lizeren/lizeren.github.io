@@ -74,7 +74,7 @@ If ml_util_func is defined in a shared library:
 Sym.Value (0000049c) is the resolved address of ml_util_func.
 The relocation at offset 000004b4 updates a PC-relative reference to this address. Which in other words, 4b4 is the instruction address where the function ml_util_func is called in the program.
 
-####2. Special Case: R_386_COPY Relocation
+#### 2. Special Case: R_386_COPY Relocation
 When a global variable (like myglob) is defined in a shared library but referenced in an executable, an R_386_COPY relocation occurs. This changes the usual meaning of Sym.Value.
 
 Example (readelf -r driver output)
@@ -99,4 +99,4 @@ It copies the value of myglob from libmlreloc.so to the new location (0x804a018)
 From this point onward, all references to myglob use the copy in driver.
 
 
-If the website of the original article is down in the future, you can refer to the [PDF document](../_archive-copy/your-document.pdf).
+If the website of the original article is down in the future, you can refer to the [PDF document](/../files/archive-copy/load-time-relocation.pdf).
