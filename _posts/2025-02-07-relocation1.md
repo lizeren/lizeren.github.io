@@ -46,7 +46,7 @@ collect2: error: ld returned 1 exit status
 ```
 This error occurs because:
 - The R_386_GOT32X relocation is being used, but the code is compiled without  Procedure Linkage Table (PLT).
-- -fno-pie and -fno-plt disable position independence, but system¡¯s GCC/glibc included in driver.c expects shared objects to be position-independent.
+- -fno-pie and -fno-plt disable position independence, but systems GCC/glibc included in driver.c expects shared objects to be position-independent.
 - The printf function is a shared library symbol, and the GOT (Global Offset Table) must be accessed properly.
 
 what we should do instead is:
