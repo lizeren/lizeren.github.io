@@ -14,8 +14,13 @@ This article from [Eli Bendersky](https://eli.thegreenplace.net/2011/08/25/load-
 
 ## Issue 1: Linking the shared library for load-time relocation
 
-While I was trying to rerun the examples, I had some trouble with my modern machine. The original article is written in 2011,so the object file was compiled with elf32-i386. My machine is 64-bit, so instead of using the command given in the article, I have to use the following command to compile the object file.
+While I was trying to rerun the examples, I had some trouble with my modern machine. The original article is written in 2011, so the object file was compiled with elf32-i386. My machine is 64-bit, so instead of using the command given in the article, I have to use the following command to compile the object file.
 
+First downlaod 32-bit development tools
+```bash
+sudo apt install gcc-multilib libc6-dev-i386
+```
+Then compile the object file with 32-bit flag
 ```bash
 gcc -m32 -g -fno-plt -fno-pie -c ml_main.c -o ml_mainreloc.o
 gcc -m32 -g -shared -o libmlreloc.so ml_mainreloc.o
