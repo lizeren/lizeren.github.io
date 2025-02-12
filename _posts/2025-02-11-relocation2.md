@@ -7,7 +7,9 @@ tags:
 ---
 
 This post is about PIC and GOT of shared libraries' global variables and functions.
+Original post [here](https://eli.thegreenplace.net/2011/11/03/position-independent-code-pic-in-shared-libraries/)
 
+If the website of the original article is down in the future, you can refer to the [PDF document](/../files/archive-copy/PIC_shared_libraries.pdf).
 ## How to verify that the run-time address of ml_util_func@plt
 
 I follow the original post and below is the output on my own machine.
@@ -64,5 +66,4 @@ It is indeed pointing to the push instruction of ml_util_func@plt.
    0xf7fba040 <ml_util_func@plt>:	jmp    DWORD PTR [ebx+0xc]
    0xf7fba046 <ml_util_func@plt+6>:	push   0x0
    0xf7fba04b <ml_util_func@plt+11>:	jmp    0xf7fba030
-
 ```
