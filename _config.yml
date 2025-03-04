@@ -12,7 +12,8 @@ title                    : "Zeren Li"
 title_separator          : "-"
 name                     : &name "Zeren (George) Li"
 description              : &description "personal description"
-url                      : https://lizeren.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+# url                      : https://lizeren.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://lizerengeorge.com
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "lizeren/lizeren.github.io"
 
