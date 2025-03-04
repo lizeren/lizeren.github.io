@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "project"
+title: "Projects"
 permalink: /project/
 author_profile: true
 redirect_from:
@@ -9,7 +9,11 @@ redirect_from:
 
 {% include base_path %}
 
-TBD
+<div class="grid__wrapper">
+  {% for post in site.project %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
 
 <!-- Education
 ======

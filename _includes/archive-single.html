@@ -12,7 +12,11 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% if post.collection == 'projects' %}
+<div class="{{ include.type | default: "list" }}__item project-grid-item">
+{% else %}
 <div class="{{ include.type | default: "list" }}__item">
+{% endif %}
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -22,11 +26,11 @@
           {% else %}
             "{{ teaser | prepend: "/images/" | prepend: base_path }}"
           {% endif %}
-          alt="">
+          alt="" {% if post.collection == 'projects' %}class="project-image"{% endif %}>
       </div>
     {% endif %}
 
-    <h2 class="archive__item-title" itemprop="headline">
+    <h2 class="archive__item-title" itemprop="headline" style="font-size: 1.2rem; margin: 10px 0;">
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
@@ -48,6 +52,10 @@
 
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+    <!-- <p class="archive__item-excerpt">
+      {{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}
+    </p> -->
+    
     {% elsif post.excerpt and site.read_more == 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
