@@ -62,7 +62,7 @@ In my case
 abc -liberty /mnt/linuxstorage/vlsi-open-source-tool/case_study/freepdk-45nm/pkgs/base/stdcells.lib
 
 clean
-write_verilog fifo_asic_FreePDK45.v
+write_verilog -noattr fifo_asic_FreePDK45.v
 ```
 #### Purpose of dfflibmap
 - **Mapping Generic DFFs**:
