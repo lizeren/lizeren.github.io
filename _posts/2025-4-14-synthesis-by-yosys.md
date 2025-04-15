@@ -8,7 +8,11 @@ tags:
 ---
 
 ## Synthesis by Yosys
+
+This is the first post in the VLSIDesignChain series using free open source VLSI design tools as well as proprietary tools interleaved.
+
 ### FPGA
+This step provides a good starting point for learning Yosys.
 ```bash
 yosys yosys.v
 ```
@@ -21,6 +25,7 @@ Note: synth_ice40 is a prepackaged synthesis script. Yosys official documentatio
 Source: [Yosys Synthesis Starter](https://yosyshq.readthedocs.io/projects/yosys/en/stable/getting_started/example_synth.html#final-steps), [write_verilog](https://yosyshq.readthedocs.io/projects/yosys/en/latest/cmd/write_verilog.html#cmd-write_verilog)
 
 ### ASIC
+Now we are ready to synthesize the ASIC design, which will be used in the next post for placement and routing.
 We use [FreePDK45](https://mflowgen.readthedocs.io/en/latest/stdlib-freepdk45.html), a free PDK for research and academic purposes. You can find the liberty file [here](https://github.com/mflowgen/mflowgen/tree/master/adks/freepdk-45nm/pkgs/base).
 #### Key Files in Your FreePDK-45nm Package
 - `stdcells.lib`
