@@ -1,14 +1,13 @@
 ---
 title: 'VLSIDesignChain: 1 - Synthesis by Yosys '
 date: 2025-04-14
-permalink: /posts/2025/04/vlsi-design-chain/
+permalink: /posts/2025/04/vlsi-design-chain-1/
 tags:
   - VLSI
   - Articles
 ---
 
 ## Synthesis by Yosys
-
 This is the first post in the VLSIDesignChain series using free open source VLSI design tools as well as proprietary tools interleaved.
 
 ### FPGA

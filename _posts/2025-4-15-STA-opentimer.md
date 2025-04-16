@@ -1,7 +1,7 @@
 ---
 title: 'VLSIDesignChain: 2 - Static Timing Analysis by OpenTimer '
 date: 2025-04-15
-permalink: /posts/2025/04/vlsi-design-chain/
+permalink: /posts/2025/04/vlsi-design-chain-2/
 tags:
   - VLSI
   - Articles
@@ -157,3 +157,5 @@ related pin      10.000      10.000  rise  _15_:CK (DFF_X1)
       slack                   0.303        MET
 
 ```
+
+##### In the next post, I will show how to use nextpnr to do place and route on a FPGA design.
