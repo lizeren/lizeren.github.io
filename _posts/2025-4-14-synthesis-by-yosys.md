@@ -1,5 +1,5 @@
 ---
-title: 'Yosys Synthesis'
+title: 'VLSIDesignChain: 1 - Synthesis by Yosys '
 date: 2025-04-14
 permalink: /posts/2025/04/vlsi-design-chain/
 tags:
@@ -72,7 +72,7 @@ By default, Yosys uses generic D flip-flop implementations for sequential logic.
 This mapping is important because it replaces the abstract DFF elements with cells that have known characteristics (area, timing, power). It ensures that your synthesized design accurately reflects the behavior of the actual standard cells you plan to use on silicon.
 
 
-##### In the next post, I will show how to use the synthesis result to do placement and routing in Cadence virtuoso.
+##### In the next post, I will show how to use the synthesis result to do Static Timing Analysis in OpenTimer.
 
 
 
